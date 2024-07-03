@@ -4,20 +4,23 @@ def main():
     text = get_book_text(book_path) 
     num_words = get_num_words(text)
     print(f"{num_words} words found in this document.")
-    letter_dict = {}
+    letter_count = {}
     lowered_text = text.lower()
     just_letters = []
     for char in lowered_text:
         just_letters.append(char)
     
+#def letter_counter(just_letters):
+    for letter in just_letters:
+        if letter in letter_count:
+            letter_count[letter] += 1
+        else: 
+            letter_count[letter] = 1
+    print(letter_count)
 
 
 
-#def letters_dict():
-    
 
-    #for i in lowered_text:
-        #letter_dict.update({i: += 1})
 
 
 
