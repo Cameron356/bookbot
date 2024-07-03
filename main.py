@@ -6,7 +6,17 @@ def main():
     letter_dict = alpha_char_dict(text)
     sorted_dict = sort_reverse(letter_dict)
     list_of_dict = dict_to_list(sorted_dict)
-    print(f"the {list_of_dict[0].keys()} character was found {list_of_dict[0].values} times")
+    
+#Maybe should add this to a function    
+    print(f"--- Begin report of {book_path} ---")
+    print(f"{num_words} found in the document\n")    
+    for i in list_of_dict:
+        for key, value in i.items():
+            print(f"The '{key}' character was found {value} times")
+    return print("--- End report ---")
+
+
+    #print(f"the {(list_of_dict[0]).keys} character was found {list_of_dict[0].values} times")
 
 
 
