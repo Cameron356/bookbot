@@ -12,10 +12,11 @@ def main():
     
 #def letter_counter(just_letters):
     for letter in just_letters:
-        if letter in letter_count:
-            letter_count[letter] += 1
-        else: 
-            letter_count[letter] = 1
+        if letter.isalpha():
+            if letter in letter_count:
+                letter_count[letter] += 1
+            else: 
+                letter_count[letter] = 1
     print(letter_count)
 
 
